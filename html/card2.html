@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lite Craft </title>
+   <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        img{
+            box-sizing: border-box;
+            margin-top: 100px;
+            padding: 2px; 
+            float: right;
+            border-radius: 5%;
+        }
+        .text h2{
+            line-height: 25px;
+            margin-top: 150px;
+            margin-right: 400px;
+        }
+        .text p{
+            margin-left: 350px;
+            margin-top: 20px;
+        }
+        
+        /* Next & previous buttons */
+          .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        margin-top: 270px;
+        margin-left: -60px;
+        margin-right: -60px;
+        }
+        /* Number text (1/5 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 14px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        margin-top: 200px;
+        }
+      </style>
+</head>
+<body >
+    <div class="container-card2">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Article</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="quote.html">Quote</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="Food"> 
+            <center><h2 style="font-size: 25px; justify-content: center;"> Cravings that you might also have </h2>
+            <p> Food is one of the things that we like a lot, sometimes we eat just to passed time or maybe were just hungry that why we are craving for something to eat. These food are very appetizing and tasty to look at. Here are some food that we like. </p></center>
+ </div>
+ <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="47.jpg" style="width: 40%">
+      <div class="text"> 
+        <h2> my favorite food is french fries just put a liitle bit of iodized salt for it to be tasty. </h2>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="48.jfif" style="width: 40%">
+        <div class="text"> 
+          <h2> I am always craving in this one, maybe a buy 1 take 1 will do for me, i can take it if its a huge size of burger. </h2>
+          </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="51.jpeg" style="width: 40%">
+        <div class="text"> 
+          <h2> Eating ice cream in summer was really a good idea since its really hot whenever you're inside of your home or not. Enjoying while you eat the ice cream without holding yourself back is incredible. </h2>
+          </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="49.jpg" style="width: 40%">
+        <div class="text"> 
+          <h2> I am personally really addicted to this drink, I really enjoy those boba thing while drinking this cold milktea. </h2>
+          </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="50.jpg" style="width: 40%">
+        <div class="text"> 
+          <h2> yes, I am a coffee addict, I always like my coffee to have a ice in it than the hot ones. I just really enjoy it even if its a cold weather.</h2>
+          </div>
+      </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    </body>
+    </html> 

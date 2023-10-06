@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lite Craft </title>
+   <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+      img{
+            box-sizing: border-box;
+            margin-top: 100px;
+            padding: 2px; 
+            float: right;
+            border-radius: 5%;
+        }
+        .text h2{
+            line-height: 25px;
+            margin-top: 150px;
+            margin-right: 400px;
+        }
+        .text p{
+            margin-left: 350px;
+            margin-top: 20px;
+        }
+        
+        /* Next & previous buttons */
+          .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        margin-top: 270px;
+        margin-left: -60px;
+        margin-right: -60px;
+        }
+        /* Number text (1/8 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 14px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        margin-top: 200px;
+        }
+    </style>
+</head>
+<body >
+    <div class="container-quote">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Article</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="quote.html">Quote</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+              <div class="quote"> 
+                <center><h2 style="font-size: 25px; justify-content: center;"> Sentences that we can relate </h2>
+                <p> A quote is something we remember from what we read, heard and saw, It's a deep reminder for us that we always hold on, It offers a second voice that echoes in our thoughts, beliefs, and claims and Reading quotes can improve how we feel and change our mood for the better. Sentences that we understood or we can relate to because of the fact that we encounter the same scenario or we already experience it. These sentences offers us a lot of different feeling depends what it show or what it makes us feel.</p></center>
+     </div>
+     <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 8</div>
+          <img src="14.jpg" style="width: 40%">
+          <div class="text"> 
+            <h2> "If I'm going to die, I'd like to actually live first. And then I'll die." </h2>
+            <p> - Five Feet Apart </p>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 8</div>
+            <img src="19.jpg" style="width: 40%">
+            <div class="text">
+              <h2>“Growing is not always forward. Sometimes, you step back for every step forward.” </h2>
+              <p> - Achilles</p>
+              </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 8</div>
+            <img src="16.jpg" style="width: 30%">
+            <div class="text">
+              <h2>“Need to feel motivated in order to do something." </h2>
+              <p> -JangUk (Alchemy of Souls) </p>
+              </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 8</div>
+            <img src="17.jpg" style="width: 30%">
+            <div class="text">
+              <h2>“If you feel that you're tired, it means you're doing well." </h2>
+              <p> - Master Kim (Dr. Romantic) </p>
+              </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 8</div>
+            <img src="15.png" style="width: 30%">
+            <div class="text">
+              <h2>“Life doesn't allow you to be weak." </h2>
+              </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 8</div>
+            <img src="26.jpg" style="width: 30%">
+            <div class="text">
+              <h2>“If you do not believe in yourself, no one will do it for you”</h2>
+              <p> - Kobe Bryant</p>
+              </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 8</div>
+            <img src="15.png" style="width: 30%">
+            <div class="text">
+              <h2>“If you have big dreams pursue and motivate yourself no matter what happen in your life.”</h2>
+              </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">8 / 8</div>
+            <img src="27.jpg" style="width: 30%">
+            <div class="text">
+              <h2>“No matter how hard or impossible it is, never lose sight of your goal.” </h2>
+              <p> - Monkey D. Luffy </p>
+              </div>
+          </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+            </body>
+            </html> 
+            
+
+
+            

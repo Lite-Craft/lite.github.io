@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lite Craft </title>
+   <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        img{
+            box-sizing: border-box;
+            margin-top: 100px;
+            padding: 2px; 
+            float: right;
+            border-radius: 5%;
+        }
+        .text h2{
+            line-height: 25px;
+            margin-top: 75px;
+            margin-right: 400px;
+        }
+        .text p{
+            margin-left: 350px;
+            margin-top: 10px;
+        }
+        
+        /* Next & previous buttons */
+          .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        margin-top: 270px;
+        margin-left: -60px;
+        margin-right: -60px;
+        }
+        /* Number text (1/5 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 14px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        margin-top: 150px;
+        }
+      </style>
+</head>
+<body >
+    <div class="container-card3">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Article</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="quote.html">Quote</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="Sports & Hobbies"> 
+            <center><h2 style="font-size: 25px; justify-content: center;"> Sports & Hobbies that we have </h2>
+            <p> We will share to you the sports and hobbies of some of our members. Hobbies were doing what you link and what you want to do while doing sports need a lot of energy to learn it. Were going to list some of our members' sports and hobbies that they truly like. Feel free to read their short description in every slide! </p></center>
+ </div>
+ <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="52.jpg" style="width: 40%">
+      <div class="text"> 
+        <h2> i like to ride bike! because The fresh air, exercise, and scenery can help you forget about your worries and enjoy the moment. It's just plain fun: Last but not least, bicycling is just plain fun! It's a great way to enjoy the outdoors. </h2>
+    <p> - Sharena Joy</p>    
+    </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="53.jpg" style="width: 40%">
+        <div class="text"> 
+          <h2> I think my talents are playing guitar and singing, but I'm not actually good.</h2>
+          <p> - Sharena Joy </p>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="54.jpg" style="width: 40%">
+        <div class="text"> 
+          <h2> I love playing basketball. My dad influenced me because he was also a basketball addict. Back in their time, my dad and my uncles always joined street leagues in Manila, and they always won championships. And now, he's still playing and coaching or teaching youths how to play basketball. He also became my coach. Basketball is our bonding activity. </h2>
+          <p> - Dexter </p>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="55.jpg" style="width: 40%">
+        <div class="text"> 
+          <h2>  I also play table tennis. I learned how to play table tennis when I was in fifth grade. Me and my friends are the representatives of our school in a competition. I stopped playing table tennis when I was in high school. I continued playing in senior high school because I heard they're conducting a table tennis tryout. In conclusion, I love sports, and I want to learn how to play all the sports. Sports will help us to be physically fit and happy. </h2>
+          <p> - Dexter </p>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="56.jpg" style="width: 40%">
+        <div class="text"> 
+          <h2> Our team became champion on cluster 5 in our school and the we got 2nd place in volleyball.</h2>
+          <p> - Bryant </p>
+          </div>
+      </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    </body>
+    </html> 
